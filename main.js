@@ -41,18 +41,19 @@ const obj = [
 
 ]
 
-// console.log(obj);
 
 for(let index in obj){
     const card = obj[index];
-
-    console.log(card);
 
     const cardImg = card.image;
     const cardName = card.firstName;
     const cardJob = card.job;
 
+
+    console.log(obj);
+
     container.innerHTML +=
+
     `
     <div class="team-card">
             <div class="card-image">
@@ -69,6 +70,24 @@ for(let index in obj){
     `
 
 }
+
+
+    btn.addEventListener('click', function(){
+        const namePush = document.getElementById('name').value;
+        const rolePush = document.getElementById('role').value;
+        const imgPush = document.getElementById('image').value;
+
+        console.log(obj);
+        const newObj = 
+        {
+            image: imgPush,
+            firstName: namePush,
+            job: rolePush
+        };
+
+        obj.push(newObj);
+    });
+
 
 
 
