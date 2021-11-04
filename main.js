@@ -42,34 +42,7 @@ const obj = [
 ]
 
 
-for(let index in obj){
-    const card = obj[index];
-
-    const cardImg = card.image;
-    const cardName = card.firstName;
-    const cardJob = card.job;
-
-
-    console.log(obj);
-
-    container.innerHTML +=
-
-    `
-    <div class="team-card">
-            <div class="card-image">
-              <img
-                src="${cardImg}"
-                alt="Wayne Barnett"
-              />
-            </div>
-            <div class="card-text">
-              <h3>${cardName}</h3>
-              <p>${cardJob}</p>
-            </div>
-          </div>
-    `
-
-}
+    test(obj);
 
 
     btn.addEventListener('click', function(){
@@ -86,7 +59,41 @@ for(let index in obj){
         };
 
         obj.push(newObj);
+
+        test(obj);
     });
+
+    
+    function test(object){
+        for(let index in object){
+            const card = object[index];
+        
+            const cardImg = card.image;
+            const cardName = card.firstName;
+            const cardJob = card.job;
+        
+        
+            console.log(obj);
+        
+            container.innerHTML +=
+        
+            `
+            <div class="team-card">
+                    <div class="card-image">
+                      <img
+                        src="${cardImg}"
+                        alt="Wayne Barnett"
+                      />
+                    </div>
+                    <div class="card-text">
+                      <h3>${cardName}</h3>
+                      <p>${cardJob}</p>
+                    </div>
+                  </div>
+            `
+        
+        }
+    }
 
 
 
