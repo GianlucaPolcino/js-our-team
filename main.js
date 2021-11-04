@@ -2,6 +2,8 @@
 const container = document.querySelector('.team-container');
 const btn = document.getElementById('addMemberButton');
 
+container.innerHTML = '';
+
 const obj = [
     {
         image: 'img/wayne-barnett-founder-ceo.jpg',
