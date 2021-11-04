@@ -60,6 +60,8 @@ const obj = [
 
         obj.push(newObj);
 
+        container.innerHTML = '';
+
         test(obj);
     });
 
@@ -91,6 +93,7 @@ const obj = [
                     </div>
                   </div>
             `
+            
         
         }
     }
