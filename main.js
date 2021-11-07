@@ -44,7 +44,7 @@ const obj = [
 ]
 
 
-    test(obj);
+    newCard(obj);
 
 
     btn.addEventListener('click', function(){
@@ -60,15 +60,20 @@ const obj = [
             job: rolePush
         };
 
-        obj.push(newObj);
+        if(imgPush == '' || rolePush == '' || namePush == ''){
+            alert('Attenzione, devi completare il form!');
+        }else{
+            obj.push(newObj);
+        }
+
 
         container.innerHTML = '';
 
-        test(obj);
+        newCard(obj);
     });
 
     
-    function test(object){
+    function newCard(object){
         for(let index in object){
             const card = object[index];
         
@@ -86,7 +91,7 @@ const obj = [
                     <div class="card-image">
                       <img
                         src="${cardImg}"
-                        alt="Wayne Barnett"
+                        alt="${cardName}"
                       />
                     </div>
                     <div class="card-text">
